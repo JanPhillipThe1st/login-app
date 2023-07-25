@@ -385,10 +385,10 @@
         <h5>Login to Your Account</h5>
         <p>Enter your username & password to log in.</p>
         <label for="username">Username</label>
-        <input class="form-control" type="text" name="username" id="username" placeholder="Enter your username here...">
+        <input class="form-control" (change)="setUsername($event)" type="text" name="username" id="username" placeholder="Enter your username here...">
         <label for="password">Password</label>
-        <input class="form-control" type="password" name="password" id="password" placeholder="Enter your password here...">
-        <button class="btn btn-primary">Login</button>
+        <input class="form-control" (change)="setPassword($event)" type="password" name="password" id="password" placeholder="Enter your password here...">
+        <button class="btn btn-primary" (click)="login()">Login</button>
         <span>
           <h6>Don't have an account? <a routerLink="../registration" routerLinkActive="active">Create an account.</a></h6>
         </span>
